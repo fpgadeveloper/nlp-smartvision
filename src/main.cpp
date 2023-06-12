@@ -74,7 +74,7 @@ void Keyword_Spotting_Debug(
 void test_models(char *file, char *aitask);
 void Detection();     // function to perform the Vision Task
 void Capture_Audio(); // Function to capture audio continuously
-std::string mipi_type = "imx_vcap_csi";
+std::string mipi_type = "vcap_rpi_cam";
 
 static void usage(char *command)
 {
@@ -159,7 +159,7 @@ int main(int argc, char *argv[])
         }
         else if (strcmp("rpi", argv[2]) == 0)
         {
-          mipi_type = "imx_vcap_csi";
+          mipi_type = "vcap_rpi_cam";
         }
         else if ((strcmp("-v", argv[2]) == 0) || (strcmp("--verbose", argv[2]) == 0))
         {
@@ -180,7 +180,7 @@ int main(int argc, char *argv[])
         }
         else if (strcmp("rpi", argv[2]) == 0)
         {
-          mipi_type = "imx_vcap_csi";
+          mipi_type = "vcap_rpi_cam";
         }
         else
         {

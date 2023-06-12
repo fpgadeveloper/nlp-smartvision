@@ -220,8 +220,8 @@ void Detection()
 		}
 		else
 		{
-			std::cout << "imx ";
-			tmp = "init-imx-smartvision.sh '" + mipimediadev + "'";
+			std::cout << "RPi cam1 ";
+			tmp = "init-rpi-cam1-smartvision.sh '" + mipimediadev + "'";
 		}
 		std::cout << "node for RGB/1024x768 pipeline \n" ;
 				//  << tmp << std::endl;
