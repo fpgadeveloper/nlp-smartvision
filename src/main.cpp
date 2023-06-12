@@ -74,13 +74,13 @@ void Keyword_Spotting_Debug(
 void test_models(char *file, char *aitask);
 void Detection();     // function to perform the Vision Task
 void Capture_Audio(); // Function to capture audio continuously
-std::string mipi_type = "vcap_rpi_cam";
+std::string mipi_type = "vcap_rpi_cam1";
 
 static void usage(char *command)
 {
   printf(("\n Usage: %s [OPTION] [arg1] [arg2]  \n \n"), command);
 	printf("%-50s%-100s\n", "-h (or) --help", "help");
-	printf("%-50s%-100s\n", "-m (or) --mipi <isp/rpi>", "test the application with live video from mipi cameras rpi(default)/isp");
+	printf("%-50s%-100s\n", "-m (or) --mipi <cam1/cam2>", "test the application with live video from rpi cameras cam1(default)/cam2");
 	printf("%-50s%-100s\n", "-u (or) --usb", "test the application with live video from USB camera");
 	printf("%-50s%-100s\n", "-f (or) --file-audio  <testing_list>.txt", "test the keyword spotting with audio files listed in the .txt file");
 	printf("%-50s%-100s\n", "-t (or) --test <sample_image> <model>", "test the DPU with sample images. Input is Model and sample jpeg. Supported models are densebox_640_360, yolov2_voc_pruned_0_77 & plate_detect");
@@ -153,13 +153,13 @@ int main(int argc, char *argv[])
 
       if (argc == 3)
       {
-        if (strcmp("isp", argv[2]) == 0)
+        if (strcmp("cam1", argv[2]) == 0)
         {
-          mipi_type = "isp_vcap_csi";
+          mipi_type = "vcap_rpi_cam1";
         }
-        else if (strcmp("rpi", argv[2]) == 0)
+        else if (strcmp("cam2", argv[2]) == 0)
         {
-          mipi_type = "vcap_rpi_cam";
+          mipi_type = "vcap_rpi_cam2";
         }
         else if ((strcmp("-v", argv[2]) == 0) || (strcmp("--verbose", argv[2]) == 0))
         {
@@ -174,13 +174,13 @@ int main(int argc, char *argv[])
       }
       if (argc == 4)
       {
-        if (strcmp("isp", argv[2]) == 0)
+        if (strcmp("cam1", argv[2]) == 0)
         {
-          mipi_type = "isp_vcap_csi";
+          mipi_type = "vcap_rpi_cam1";
         }
-        else if (strcmp("rpi", argv[2]) == 0)
+        else if (strcmp("cam2", argv[2]) == 0)
         {
-          mipi_type = "vcap_rpi_cam";
+          mipi_type = "vcap_rpi_cam2";
         }
         else
         {
