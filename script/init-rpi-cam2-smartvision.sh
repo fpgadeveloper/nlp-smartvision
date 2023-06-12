@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-media-ctl -V '"imx219 4-0010":0 [fmt:SRGGB10_1X10/1920x1080]' -d $1
+media-ctl -V '"imx219 2-0010":0 [fmt:SRGGB10_1X10/1920x1080]' -d $1
 media-ctl -V '"80000000.mipi_csi2_rx_subsystem":0 [fmt:SRGGB10_1X10/1920x1080 field:none colorspace:srgb]' -d $1
 media-ctl -V '"80000000.mipi_csi2_rx_subsystem":1  [fmt:SRGGB10_1X10/1920x1080 field:none colorspace:srgb]' -d $1
 media-ctl -V '"b0010000.ISPPipeline_accel":0  [fmt:SRGGB10_1X10/1920x1080 field:none colorspace:srgb]' -d $1
