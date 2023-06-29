@@ -216,13 +216,12 @@ void Detection()
 		if (strcmp("vcap_rpi_cam1", mipi_type.c_str()) == 0)
 		{
 			std::cout << "RPi cam1 ";
-			tmp = "init-rpi-cam1-smartvision.sh '" + mipimediadev + "'";
 		}
 		else
 		{
 			std::cout << "RPi cam2 ";
-			tmp = "init-rpi-cam2-smartvision.sh '" + mipimediadev + "'";
 		}
+		tmp = "init-rpi-cam-smartvision.sh '" + mipimediadev + "'";
 		std::cout << "node for RGB/1024x768 pipeline \n" ;
 				//  << tmp << std::endl;
 		int systemRet = system(tmp.c_str());
