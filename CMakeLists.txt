@@ -80,8 +80,7 @@ install(PROGRAMS script/nlp-smartvision
 
 install(PROGRAMS
     script/init-isp-smartvision.sh
-    script/init-rpi-cam1-smartvision.sh
-    script/init-rpi-cam2-smartvision.sh
+    script/init-rpi-cam-smartvision.sh
     script/nlp-smartvision-install.py
     DESTINATION ${INSTALL_PATH}/bin)
 
